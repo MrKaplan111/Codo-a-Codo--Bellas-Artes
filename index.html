@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte en Buenos Aires</title>
+    <link rel="stylesheet" href="CSS/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/materialize.min.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    
+  <header>
+    <nav class="navbar">
+      <h1>Bellas Artes</h1>
+
+      <div class="menu" id="menu">
+        <a href="#Inicio" class="is-active">Inicio</a>
+        <a href="#products">Galería</a>
+        <a href="#artistas">Artistas</a>
+        <a href="#contact">Contacto</a>
+      </div>
+  
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="main-info" id="Inicio">
+    
+    <div class="container">
+        <div data-aos="fade-right" data-aos-duration="2000">
+          <h1>Sala<span> Bon Marché</span></h1>
+          <p>Desde el 19 de Marzo, el Centro Cultural Borges es sede de dos muestras producidas por el Museo: “Bellas Artes/Bon Marché”, sobre los primeros años de la institución (1895-1909) e “Inaugurales. Sara Facio y la creación de la colección fotográfica del Bellas Artes”.</p>
+          <button class="btn-info">VER GALERÍA</button>
+        </div> 
+        <img src="img/img1.jpg" alt="La toilette de Venus" data-aos="fade-left" data-aos-duration="2000">
+    </div>
+  </main>
+
+  <article class="overlay-section">
+    <div class="overlay">
+      <div class="container">
+        <h3>Recepción de un cardenal</h3>
+        <h2>“Usas un espejo de cristal para ver tu cara; usas obras de arte para ver tu alma.”</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt illo, culpa magni doloribus esse, amet labore iste obcaecati cumque provident debitis sunt! Fugit facere rerum quo harum explicabo officiis commodi!</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="products" data-aos="fade-up" data-aos-duration="3500">
+    <section class="product-title" id="products">
+      <h2>OBRAS</h2>
+      <div class="divider"></div>
+    </section>
+    
+    <div class="carousel" data-aos="zoom-in" data-aos-duration="2000">
+      <a class="carousel-item" href="#one!" alt="La Rivera">
+        <img src="./img/Pinturas/La rivera recorte.png">
+        <h5>La Rivera</h5>
+      </a>
+      <a class="carousel-item" href="#two!">
+        <img src="./img/Pinturas/La sopa de los pobres recorte.png" alt="La sopa de los pobres">
+        <h5>La sopa de los pobres</h5>
+      </a>
+      <a class="carousel-item" href="#three!">
+        <img src="./img/Pinturas/Mujer con vaso azul recorte.png" alt="Mujer con vaso azul">
+        <h5>Mujer con vaso azul</h5>
+      </a>
+      <a class="carousel-item" href="#four!">
+        <img src="./img/Pinturas/Pierre Puvis recorte.png" alt="Pierre Puvis">
+        <h5>Pierre Puvis</h5>
+      </a>
+      <a class="carousel-item" href="#five!">
+        <img src="./img/Pinturas/Psiquis recorte.png" alt="Psiquis en la fuente">
+        <h5>Psiquis en la fuente</h5>
+      </a>
+    </div>
+  </article>
+
+  <div class="nuestros-artistas" id="artistas" data-aos="fade-up" data-aos-duration="3500"> 
+    <h2>ARTISTAS</h2>
+    <div class="divider"></div>
+
+    <div class="artistas" data-aos="zoom-out-up">
+      <div class="gallery">
+        <a href="./img/Artistas/Alexis-Joseph_Mazerolle.jpg"><img src="./img/Artistas/Alexis-Joseph_Mazerolle.jpg" alt="Alexis Joseph Mazerolle" /></a>
+        <a href="./img/Artistas/boudin-eugene.jpg"><img src="./img/Artistas/boudin-eugene.jpg" alt="Boudin Eugene" /></a>
+        <a href="./img/Artistas/Alfred Roll.jpg"><img src="./img/Artistas/Alfred Roll.jpg" alt="Alfred Roll" /></a>
+        <a href="./img/Artistas/Edmond_Aman-Jean.jpg"><img src="./img/Artistas/Edmond_Aman-Jean.jpg" alt="Edmond Aman Jean" /></a>
+        <a href="./img/Artistas/Friedrich_Kaulbach_1862.jpg"><img src="./img/Artistas/Friedrich_Kaulbach_1862.jpg" alt="Friedrich Kaulbach" /></a>
+        <a href="./img/Artistas/ReinaldoGiudici.jpg"><img src="./img/Artistas/ReinaldoGiudici.jpg" alt="Reinaldo Giudici" /></a>
+    </div>
+    </div>
+  </div>
+
+  <div class="contact" id="contact">
+    <form class="container-form">
+      <h2>Contacto</h2>
+      <input type="text" placeholder="Nombre">
+      <input type="text" placeholder="Asunto">
+      <textarea placeholder="Message">Mensaje...</textarea>
+      <button class="btn-info">Enviar Mensaje</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    
+    <div class="container">
+      <div class="social-media">
+        <h3>Desarrollado por Eve Márquez</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/simple-lightbox.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+  </script>
+</body>
+</html>

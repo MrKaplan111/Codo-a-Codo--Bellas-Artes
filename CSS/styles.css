@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;800&family=Tiro+Bangla&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+:root {
+    --primary-color: #dba37d;
+    --secondary-color: #ffffff;
+    --alt-color: #212121;
+    --overlay: rgba(0,0,0,0.8);
+    --container-width: 95vw;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    max-width: 1280px;
+    margin: 0 auto;
+    background: none;
+    box-shadow: none;
+    padding-top: none;
+    margin: 0 auto;
+    padding: 0;
+    width: var(--container-width);
+    
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    background-color: var(--secondary-color);
+    padding: 16px 32px;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+h1 {
+    color: #000;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    grid-column: 2 / 3;
+}
+
+
+
+.menu {
+    grid-column: 4 / 7;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 -16px;
+}
+
+.menu a {
+    color: #000;
+    margin: 0 16px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 10px;
+    border-radius: 80px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.menu a.is-active, .menu a:hover {
+    background-color: var(--primary-color);
+}
+
+@media only screen and (max-width: 620px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        grid-column: 8 / 9;
+        position: relative;
+        z-index: 1;
+    
+        user-select: none;
+    
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+    
+        background-color: var(--alt-color);
+        border-radius: 6px;
+        z-index: 1;
+    
+        transform-origin: 0 0;
+        transition: 0.4s;
+    }
+    
+    .hamburger:hover span:nth-child(2) {
+        transform: translateX(10px);
+        background: var(--primary-color);
+    }
+    
+    .hamburger.is-active span:nth-child(1) {
+        transform: translate(0px, -2px) rotate(45deg);
+    }
+    
+    .hamburger.is-active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    
+    .hamburger.is-active span:nth-child(3) {
+        transform: translate(-3px, 3px) rotate(-45deg);
+    }
+    
+    .hamburger.is-active:hover span {
+        background-color: var(--primary-color);
+    }
+    
+
+    .menu {
+        position: absolute;
+        width: 100%;
+        height: 70vh;
+        display: grid;
+        align-items: center;
+        background-color: #dba37d;
+        margin-top: 41em;
+        transform: translateX(200%);
+        transition: all 1s;
+    }
+
+    .menu-toggle {
+        transform: translateX(100%);
+    }
+    
+}
+
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 4rem;
+    width: var(--container-width);
+    justify-content: center;
+}
+
+.main-info .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+    width: var(--container-width);
+    align-items: center;
+}
+
+.main-info img{
+    max-width: 100%;
+}
+
+.main-info h1 {
+    font-family: 'Tiro Bangla', sans-serif;
+    font-size: 50px;
+}
+
+.main-info span{
+    color: var(--primary-color);
+    font-family: 'Tiro Bangla', sans-serif;
+    font-size: 50px;
+}
+
+.main-info p {
+    margin-bottom: 1em;
+}
+  
+.btn-info {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: #000;
+    cursor: pointer;
+}
+  
+.btn-info:hover {
+    background-color: var(--alt-color);
+    color: #ffffff;
+}
+  
+.overlay-section {
+    background-image: url(https://www.bellasartes.gob.ar/media/thumbs/uploads/coleccion/8EySkN24Fn2_.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.overlay {
+    height: 67vh;
+    background-color: var(--overlay);
+}
+  
+.overlay .container {
+    color: #fff;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.overlay .container h3 {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.overlay .container h2 {
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+}
+  
+.overlay .container p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.products {
+    height: 80vh;
+    width: 100vw;
+}
+  
+.product-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+}
+
+.product-title h2{
+    font-family: 'Tiro Bangla', sans-serif;
+}
+
+.divider {
+    width: 200px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+
+.carousel {
+    height: 110vh;
+    margin: 0 auto;
+}
+
+.carousel .carousel-item {
+    width: 400px;
+}
+  
+.carousel .carousel-item img {
+    width: 350px;
+    height: 500px;
+    margin-top: -12em;
+}
+
+.carousel .carousel-item h5 {
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+}
+
+.nuestros-artistas {
+    background-color: none;
+}
+  
+.nuestros-artistas h2 {
+    text-align: center;
+    font-family: 'Tiro Bangla', sans-serif;
+    font-size: 50px;
+    color: #000;
+    margin-top: 7em;
+}
+  
+.gallery {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery a:first-child {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+  
+.gallery a:nth-child(2) {
+    grid-column: 3/5;
+}
+  
+.gallery a, 
+.gallery img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact {
+    background-image: url(../img/banner-contact.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+  
+.container-form {
+    padding: 5em 3em;
+    width: 40%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form h2 {
+    font-family: 'Tiro Bangla', sans-serif;
+}
+  
+.container-form textarea {
+    height: 15em;
+    color: #fff;
+    padding: 1em;
+}
+  
+.container-form button {
+    margin-top: 2em;
+}
+  
+  
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 0;
+}
+  
+.footer h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    text-align: center;
+  
+}
+  
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.social-media .fab {
+    margin-right: 20px;
+    font-size: 2em;
+    color: var(--alt-color);
+}
+  
+.social-media .fab:hover {
+    color: var(--primary-color);
+}  
+
+@media screen and (max-width: 768px) {
+    .container h1 {
+        font-size: 35px;
+    }
+
+    .container span {
+        font-size: 35px; 
+    }
+
+    .overlay-section .overlay h2 {
+        font-size: 23px;
+    }
+
+    .overlay-section .overlay h3 {
+        font-size: 18px;
+    }
+
+    .overlay-section .overlay p {
+        font-size: 18px;
+    }
+
+    .product-title h2{
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+
+    .carousel .carousel-item img{
+        width: 350px;
+        height: 450px;
+        margin-top: -26em;
+    }
+
+    .carousel .carousel-item h5 {
+        font-size: 25px;
+    }
+
+    .nuestros-artistas h2 {
+        font-size: 35px;
+        margin-top: -1em;
+        letter-spacing: 2px;
+    }
+
+    .container-form h2 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .container-form h2 {
+        font-family: 'Tiro Bangla', sans-serif;
+    }
+      
+    .container-form textarea {
+        height: 13em;
+        color: #fff;
+        padding: 1em;
+    }
+
+    .footer h3 {
+        font-size: 20px;
+    }
+      
+    .social-media .fab {
+        margin-right: 20px;
+        font-size: 1em;
+    }
+
+    .container-form {
+        padding: 5em 3em;
+        width: 65%; 
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .menu {
+        margin-top: 43.5em;
+    }
+
+    .main-info .container {
+        grid-template-columns: repeat(1, 1fr);
+        height: 100vh;
+        align-items: center;
+        margin-top: 7em;
+    }
+
+    .main-info img{
+        max-width: 70%;
+    }
+
+    .main-info p{
+        font-size: 13px;
+    }
+
+    .main-info .btn-info {
+        font-size: 13px;
+    }
+
+    .overlay-section .overlay h3{
+        font-size: 13px;
+    }
+
+    .overlay-section .overlay h2{
+        font-size: 16px;
+    }
+
+    .overlay-section .overlay p{
+        font-size: 13px;
+    }
+
+    .product-title h2{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .carousel {
+        height: 110vh;
+        margin: 0 auto;
+    }
+
+    .carousel .carousel-item img{
+        width: 350px;
+        height: 450px;
+        margin-top: -19em;
+    }
+
+    .carousel .carousel-item h5 {
+        font-size: 15px;
+    }
+
+    .nuestros-artistas h2 {
+        font-size: 30px;
+        margin-top: 3em;
+        letter-spacing: 2px;
+    }
+      
+    .gallery {
+        margin-top: 4em;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery a, 
+    .gallery img {
+    width: 100%;
+    height: 100%;
+}
+
+    .container-form h2 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .footer h3 {
+        font-size: 20px;
+    }
+      
+}
+
+@media screen and (max-width: 376px){
+
+    .menu {
+        margin-top: 37em;
+    }
+
+    .product-title h2{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .carousel .carousel-item {
+        width: 260px;
+    }
+
+    .carousel .carousel-item img{
+        width: 250px;
+        height: 350px;
+        margin-top: -14em;
+    }
+
+    .container-form {
+        padding: 5em 3em;
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+    }
+
+}
