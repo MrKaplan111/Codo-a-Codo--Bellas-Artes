@@ -7,4 +7,4 @@ Primer corte: 768px (Resolución 768x1024)
 Segundo corte: 540px (Resolución 540x810 px)
 Tercer corte: 376px (Resolucón 376x667px)
 
-Las animaciones se encuentran en todas las secciones, con desplazamientos hacia la derecha e izquierda. Intente hacer una galería en la seccion de "Artistas" pero no lo que me funcionara Lightbox.
+Las animaciones se encuentran en todas las secciones, con desplazamientos hacia la derecha e izquierda. Intente hacer una galería en la seccion de "Artistas" pero no logre que funcionara Lightbox.
